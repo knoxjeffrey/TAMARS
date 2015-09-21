@@ -64,10 +64,10 @@ bundler.on('update', function() {
 });
 
 gulp.task('build', function() {
-  bundle();
+  return bundle();
 });
 
-gulp.task('serve', function() {
+gulp.task('serve', ['build'], function() {
   sync({
     server: {
       baseDir: './',
@@ -86,4 +86,4 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./css'));
 });
 
-gulp.task('default', ['build', 'serve', 'sass']);
+gulp.task('default', ['serve', 'sass']);

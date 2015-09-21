@@ -20,7 +20,7 @@
     "lodash": "^3.10.0",
     "node-notifier": "^4.2.1",
     "react": "^0.13.3",
-    "react-router": "^1.0.0-beta2",
+    "react-router": "^1.0.0-rc1",
     "react-sticky": "^2.5.2",
     "reactify": "^1.1.0",
     "reflux": "^0.2.8",
