@@ -1,0 +1,202 @@
+.primary-nav {
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:rgba(255,255,255,0.95);
+  -webkit-transition:-webkit-transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  transition:transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  -webkit-transform:translate3d(0, -100%, 0);
+  transform:translate3d(0, -100%, 0);
+  z-index:1001;
+  overflow-y:scroll;
+  -webkit-overflow-scrolling:touch;
+}
+
+@media only screen and (max-width: 768px) {
+  .primary-nav {
+    background-color:white
+  }
+}
+
+.primary-nav.is-active {
+  -webkit-transform:translate3d(0, 0, 0);
+  transform:translate3d(0, 0, 0)
+}
+
+.primary-nav.is-active ._nav-item {
+  -webkit-transform:translate3d(0, 0, 0) !important;
+  transform:translate3d(0, 0, 0) !important;opacity:1 !important
+}
+
+.no-csstransitions .primary-nav {
+  display:none;
+  -webkit-transform:translate3d(0, 0, 0);
+  transform:translate3d(0, 0, 0);
+  top:0
+}
+
+.no-csstransitions .primary-nav.is-active {
+  display:block
+}
+
+.primary-nav ._wrapper {
+  display:table;
+  width:100%;
+  height:100%
+}
+
+.primary-nav ._nav-list {
+  display:table-cell;
+  width:100%;
+  padding:0;
+  vertical-align:middle
+}
+
+@media only screen and (max-width: 768px) {
+  .primary-nav ._nav-list {
+    padding-top:45px
+  }
+}
+
+.primary-nav ._nav-list li {
+  margin-bottom:40px;
+  padding:0;
+  list-style:none;
+  text-align:center;
+  opacity:1
+}
+
+.primary-nav ._nav-list li li {
+  opacity:1 !important
+}
+
+.hoverable .primary-nav ._nav-list li:hover {
+  -webkit-transition:opacity 0.125s ease-in-out;
+  transition:opacity 0.125s ease-in-out;
+  opacity:0.75
+}
+
+@media only screen and (max-width: 768px) {
+  .primary-nav ._nav-list li.tutorials {
+    display:none
+  }
+}
+
+.primary-nav ._nav-list h4 {
+  margin:0;padding:0
+}
+
+.primary-nav ._nav-list ._nav-item {
+  display:block;
+  -webkit-transform:translate3d(0, -50%, 0);
+  transform:translate3d(0, -50%, 0);
+  -webkit-transition:all 0.75s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  transition:all 0.75s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  opacity:0;
+  font-size:60px;
+  cursor:pointer;
+  letter-spacing:-2.5px;
+  text-rendering:optimizeLegibility
+}
+
+.primary-nav ._nav-list ._nav-item.-home {
+  color:#333333
+}
+
+.primary-nav ._nav-list ._nav-item.-nav2 {
+  -webkit-transition-delay:0.1s;
+  transition-delay:0.1s;
+  cursor:pointer;
+  color:#58ade3
+}
+
+.primary-nav ._nav-list ._nav-item.-nav3 {
+  -webkit-transition-delay:0.15s;
+  transition-delay:0.15s;
+  color:#67ab49
+}
+
+.primary-nav ._nav-list ._nav-item.-contact {
+  -webkit-transition-delay:0.2s;
+  transition-delay:0.2s;
+  color:#f6c342
+}
+
+@media only screen and (max-width: 768px) {
+  .primary-nav ._nav-list ._nav-item {
+    font-size:45px
+  }
+}
+
+.primary-nav .tutorials-nav {
+  display:none
+}
+
+.primary-nav ._sublist {
+  background:whitesmoke;
+  max-height:0;
+  -webkit-transition:all 0.35s cubic-bezier(0.32, 0.38, 0.41, 0.99);
+  transition:all 0.35s cubic-bezier(0.32, 0.38, 0.41, 0.99);
+  overflow:hidden
+}
+
+.primary-nav ._sublist.is-active {
+  margin-top:30px;
+  padding-bottom:35px;
+  max-height:700px
+}
+
+.primary-nav ._sublist ol {
+  padding:0
+}
+
+.primary-nav ._sublist ol li {
+  margin-bottom:28px
+}
+
+.primary-nav ._sublist h5 {
+  margin:0;
+  color:#707070;
+  font-size:21px;
+  line-height:1.28571;
+  cursor:pointer
+}
+
+.primary-nav ._sublist ._group {
+  margin:0;
+  padding:35px 0 0 0
+}
+
+.primary-nav ._sublist ._group:last-child .is-active {
+  margin-bottom:-35px
+}
+
+.primary-nav ._sublist ._group-wrap {
+  background:#e9e9e9;
+  max-height:0;
+  -webkit-transition:all 0.35s cubic-bezier(0.32, 0.38, 0.41, 0.99);
+  transition:all 0.35s cubic-bezier(0.32, 0.38, 0.41, 0.99);
+  overflow:hidden
+}
+
+.primary-nav ._sublist ._group-wrap.is-active {
+  max-height:500px;
+  padding:35px 0 0 0;
+  margin:35px 0 0 0
+}
+
+.primary-nav ._sublist ._group-wrap a {
+  display:block;
+  padding:0 20px;
+  color:#707070;
+  font-size:18px;
+  font-weight:700;
+  line-height:1.27778
+}
+
+.primary-nav ._sublist ._group-wrap a.active {
+  color:#333333
+}

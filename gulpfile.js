@@ -1,14 +1,16 @@
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
 var browserify = require('browserify');
 var watchify = require('watchify');
 var reactify = require('reactify');
 var notifier = require('node-notifier');
-var server = require('gulp-server-livereload');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
-var watch = require('gulp-watch');
+var uglify = require('gulp-uglify');
+var sync = require('browser-sync');
+var historyApiFallback = require('connect-history-api-fallback');
 
 var notify = function(error) {
   var message = 'In: ';
@@ -47,40 +49,41 @@ function bundle() {
     .bundle()
     .on('error', notify)
     .pipe(source('main.js'))
-    .pipe(gulp.dest('./'))
+    //.pipe(buffer())
+    //.pipe(uglify())
+    .pipe(gulp.dest('./js'))
+    .pipe(sync.reload({
+      stream: true,
+      once: true
+    }));
 }
-bundler.on('update', bundle)
 
-gulp.task('build', function() {
-  bundle()
+bundler.on('update', function() {
+  bundle();
+  gutil.log('Rebundle...');
 });
 
-gulp.task('serve', function(done) {
-  gulp.src('')
-    .pipe(server({
-      livereload: {
-        enable: true,
-        filter: function(filePath, cb) {
-          if(/main.js/.test(filePath)) {
-            cb(true)
-          } else if(/style.css/.test(filePath)){
-            cb(true)
-          }
-        }
-      },
-      open: true
-    }));
+gulp.task('build', function() {
+  bundle();
+});
+
+gulp.task('serve', function() {
+  sync({
+    server: {
+      baseDir: './',
+      middleware: [ historyApiFallback() ]
+    },
+    files: ["*.html"]
+  });
+
+  gulp.watch('./sass/**/*.scss', ['sass', sync.reload]);
 });
 
 gulp.task('sass', function () {
   gulp.src('./sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('style.css'))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./css'));
 });
 
-gulp.task('default', ['build', 'serve', 'sass', 'watch']);
-
-gulp.task('watch', function () {
-  gulp.watch('./sass/**/*.scss', ['sass']);
-});
+gulp.task('default', ['build', 'serve', 'sass']);

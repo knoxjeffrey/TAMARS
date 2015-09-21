@@ -1,28 +1,17 @@
 ReactStarter
 ====
 
-Use this as a starting point for working on chapters of the [Learn and Understand React JS](https://www.udemy.com/learn-and-understand-reactjs/) course on Udemy.com.
+This starter will get React up and running in no time with a working router for pretty urls (no ugly standard hash with react-router) and attractive navigation.
 
 ---
 
-###Getting Started###
+###Getting Started With Git###
 
-There are two methods for getting started with this repo.
-
-####Familiar with Git?#####
 Checkout this repo, install depdencies, then start the gulp process with the following:
 
 ```
-	> git clone git@github.com:StephenGrider/ReactStarter.git
+	> git clone git@github.com:knoxjeffrey/ReactStarter.git
 	> cd ReactStarter
-	> npm install
-	> gulp
-```
-
-####Not Familiar with Git?#####
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
 	> npm install
 	> gulp
 ```
