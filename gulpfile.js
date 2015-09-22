@@ -87,3 +87,8 @@ gulp.task('sass', function () {
 });
 
 gulp.task('default', ['serve', 'sass']);
+
+gulp.task('serve-prod', serve({
+  root: './',
+  port: process.env.PORT || 5000,
+}));
