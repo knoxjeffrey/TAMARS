@@ -12,6 +12,7 @@ var uglify = require('gulp-uglify');
 var sync = require('browser-sync');
 var historyApiFallback = require('connect-history-api-fallback');
 var serve = require('gulp-serve');
+var minifyCss = require('gulp-minify-css');
 
 var notify = function(error) {
   var message = 'In: ';
@@ -103,9 +104,14 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./css'));
 });
 
+gulp.task('minify-css', function() {
+  return gulp.src('./css/*.css')
+    .pipe(minifyCss({compatibility: 'ie8'}));
+});
+
 gulp.task('default', ['serve', 'sass']);
 
-gulp.task('serve-prod', ['production_build'], serve({
+gulp.task('serve-prod', ['minify-css', 'production_build'], serve({
   root: './',
   port: process.env.PORT || 5000,
 }));
