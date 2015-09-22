@@ -6571,7 +6571,11 @@ button {
   border: 2px #ffffff solid;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -khtml-border-radius: 30px;
+  border-radius: 30px; }
   @media (max-width: 480px) {
     button {
       width: 100%; } }

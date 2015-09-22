@@ -85,7 +85,7 @@ module.exports = React.createClass({
 
         <div className="text-center">
           <Link to="/treatment">
-            <button className="highlight">I want an appointment now</button>
+            <button className="highlight">I want to book an appointment now</button>
           </Link>
         </div>
 

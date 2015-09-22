@@ -50,8 +50,20 @@ function bundle() {
     .bundle()
     .on('error', notify)
     .pipe(source('main.js'))
-    //.pipe(buffer())
-    //.pipe(uglify())
+    .pipe(gulp.dest('./js'))
+    .pipe(sync.reload({
+      stream: true,
+      once: true
+    }));
+}
+
+function production_bundle() {
+  return bundler
+    .bundle()
+    .on('error', notify)
+    .pipe(source('main.js'))
+    .pipe(buffer())
+    .pipe(uglify())
     .pipe(gulp.dest('./js'))
     .pipe(sync.reload({
       stream: true,
@@ -66,6 +78,10 @@ bundler.on('update', function() {
 
 gulp.task('build', function() {
   return bundle();
+});
+
+gulp.task('production_build', function() {
+  return production_bundle();
 });
 
 gulp.task('serve', ['build'], function() {
@@ -89,7 +105,7 @@ gulp.task('sass', function () {
 
 gulp.task('default', ['serve', 'sass']);
 
-gulp.task('serve-prod', serve({
+gulp.task('serve-prod', ['production_build'], serve({
   root: './',
   port: process.env.PORT || 5000,
 }));
