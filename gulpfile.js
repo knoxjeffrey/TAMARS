@@ -11,6 +11,7 @@ var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var sync = require('browser-sync');
 var historyApiFallback = require('connect-history-api-fallback');
+var serve = require('gulp-serve');
 
 var notify = function(error) {
   var message = 'In: ';
