@@ -1,0 +1,63 @@
+@import "./colors";
+
+.home-title-bar {
+  background-color: $primary-color;
+
+  .home-title {
+    color:#fff;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+  }
+}
+
+.home-benefits {
+
+}
+
+.home-ticks {
+  margin-top: 30px;
+  color: $primary-color;
+
+  .ticks {
+    margin-right: 10px;
+  }
+
+  .tick-text {
+    display: inline;
+  }
+}
+
+.more-tamars {
+  background: #f9f9f9;
+  margin-top: 40px;
+}
+
+.why-tamars {
+  margin-top: 40px;
+}
+
+.study-link {
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  font-size: 40px;
+
+  .home-benefits {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .fluidvids-vimeo {
+  }
+
+  .home-benefits {
+    width: 50%;
+    margin: 0 auto;
+  }
+}

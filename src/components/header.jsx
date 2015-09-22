@@ -19,7 +19,7 @@ module.exports = React.createClass({
 
         <Link to="/">
           <div id="logo">
-            LOGO
+            <img src="../../images/21_C_Logo.svg" alt="21st Century Back Care" />
           </div>
         </Link>
       </div>
@@ -36,14 +36,14 @@ module.exports = React.createClass({
             <li className="home">
               <Link to="/" className="_nav-item -home active">Home</Link>
             </li>
-            <li className="home">
-              <Link to="/" className="_nav-item -nav2 active">Nav Link</Link>
+            <li className="tamars">
+              <Link to="/treatment" className="_nav-item -nav2 active">TAMARS</Link>
             </li>
             <li className="home">
               <Link to="/" className="_nav-item -nav3 active">And Another Nav</Link>
             </li>
             <li className="contact">
-              <Link to="contact" className="_nav-item -contact active">Contact</Link>
+              <Link to="/contact" className="_nav-item -contact active">Contact</Link>
             </li>
           </ul>
   	    </div>

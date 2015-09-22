@@ -6,13 +6,15 @@ var Route = ReactRouter.Route;
 
 var Main = require("./components/main");
 var Home = require("./components/home");
+var Treatment = require("./components/treatment");
 var Contact = require("./components/contact");
 
 module.exports = (
   <Router history={new History}>
     <Route component={Main} >
       <Route path="/" component={Home} />
-      <Route path="contact" component={Contact} />
+      <Route path="/treatment" component={Treatment} />
+      <Route path="/contact" component={Contact} />
     </Route>
   </Router>
 );

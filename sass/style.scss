@@ -1,3 +1,111 @@
+@import "./colors";
+
 a:link {
   text-decoration: none;
+}
+
+h1 {
+  font-size: 60px;
+
+  @media only screen and (max-width: 992px) {
+    font-size: 50px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 40px;
+  }
+
+  @media only screen and (max-width:480px) {
+    font-size: 35px;
+  }
+}
+
+h2 {
+  font-size: 40px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 26px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+
+  @media only screen and (max-width: 480px) {
+    font-size: 18px;
+  }
+}
+
+p {
+  font-size: 18px;
+  color: #333;
+}
+
+button {
+  width: auto;
+  height: 60px;
+  color: #ffffff;
+  background-color: $primary-color-plus-1;
+  text-decoration: none;
+  font-size: 1.4em;
+  border: 2px #ffffff solid;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+}
+
+button:focus {
+  outline:0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.highlight:hover {
+  background-color: $primary-color-plus-2;
+}
+
+blockquote {
+  font-style: italic;
+  background: #f9f9f9;
+  border-left: 10px solid $primary-color-plus-1;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: $primary-color-plus-1;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+.section-header {
+  width: 320px;
+  height: 60px;
+  line-height: 60px;
+  color: #ffffff;
+  background-color: $primary-color;
+  text-decoration: none;
+  font-size: 1.6em;
+  border: 2px #ffffff solid;
+  margin: 0 auto;
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+}
+
+.section-content {
+  margin-top: 30px;
 }

@@ -1,3 +1,5 @@
+@import "../colors";
+
 .primary-nav {
   position:fixed;
   top:0;
@@ -73,12 +75,6 @@
   opacity:1 !important
 }
 
-.hoverable .primary-nav ._nav-list li:hover {
-  -webkit-transition:opacity 0.125s ease-in-out;
-  transition:opacity 0.125s ease-in-out;
-  opacity:0.75
-}
-
 @media only screen and (max-width: 768px) {
   .primary-nav ._nav-list li.tutorials {
     display:none
@@ -93,41 +89,48 @@
   display:block;
   -webkit-transform:translate3d(0, -50%, 0);
   transform:translate3d(0, -50%, 0);
-  -webkit-transition:all 0.75s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-  transition:all 0.75s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  -webkit-transition:all 0.45s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  transition:all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
   opacity:0;
   font-size:60px;
   cursor:pointer;
   letter-spacing:-2.5px;
-  text-rendering:optimizeLegibility
+  text-rendering:optimizeLegibility;
+  color:$primary-color-plus-1;
+}
+
+.primary-nav ._nav-list ._nav-item:hover {
+  font-size:65px;
+  color:$primary-color-plus-2;
 }
 
 .primary-nav ._nav-list ._nav-item.-home {
-  color:#333333
+
 }
 
 .primary-nav ._nav-list ._nav-item.-nav2 {
   -webkit-transition-delay:0.1s;
   transition-delay:0.1s;
   cursor:pointer;
-  color:#58ade3
 }
 
 .primary-nav ._nav-list ._nav-item.-nav3 {
   -webkit-transition-delay:0.15s;
   transition-delay:0.15s;
-  color:#67ab49
 }
 
 .primary-nav ._nav-list ._nav-item.-contact {
   -webkit-transition-delay:0.2s;
   transition-delay:0.2s;
-  color:#f6c342
 }
 
 @media only screen and (max-width: 768px) {
   .primary-nav ._nav-list ._nav-item {
     font-size:45px
+  }
+
+  .primary-nav ._nav-list ._nav-item:hover {
+    font-size:50px
   }
 }
 
