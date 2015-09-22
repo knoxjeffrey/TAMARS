@@ -107,6 +107,7 @@ gulp.task('sass', function () {
 gulp.task('minify-css', function() {
   return gulp.src('./css/*.css')
     .pipe(minifyCss({compatibility: 'ie8'}));
+    .pipe(gulp.dest('./css'));
 });
 
 gulp.task('default', ['serve', 'sass']);
