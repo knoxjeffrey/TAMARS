@@ -2,6 +2,7 @@
 
 a:link {
   text-decoration: none;
+  color: inherit;
 }
 
 h1 {
@@ -58,7 +59,7 @@ button {
   border-radius: 30px;
 
   @media (max-width: 480px) {
-    width: 100%;
+    width: 90%;
   }
 }
 

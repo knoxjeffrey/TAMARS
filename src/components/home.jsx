@@ -34,7 +34,7 @@ module.exports = React.createClass({
 
               <div className="home-ticks">
                 <img className="ticks" src="../../images/Yes.svg" alt="Tick" />
-                <h3 className="tick-text">Improve quality of life</h3>
+                <h3 className="tick-text">Improve your quality of life</h3>
               </div>
 
               <div className="home-ticks">
@@ -51,7 +51,7 @@ module.exports = React.createClass({
 
       <div className="more-tamars">
         <div className="section-header text-center">
-          Tell Me More
+          Does It Really Work?
         </div>
         <div className="section-content container">
           <p>
@@ -65,9 +65,9 @@ module.exports = React.createClass({
               <blockquote>Overall this study has identified short and long term applications of TAMARS® to positively influence the spinal biomechanics during functional and clinical tasks. It can be concluded that TAMARS® positively influences spinal control. This improved control may be due to an increased proprioception of the surrounding muscles, causing a greater degree of spinal stability and therefore reducing the participant’s pain.
               </blockquote>
             </div>
-            <div className="col-md-4 study-link">
+            <div className="col-md-4 study-link text-center">
               <a href="http://www.academia.edu/1823411/TAMARS_Report" target='_blank'>
-                <button className="highlight">Read Study</button>
+                <button className="highlight">Read The Study</button>
               </a>
             </div>
           </div>
