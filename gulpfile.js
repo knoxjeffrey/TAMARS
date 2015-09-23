@@ -114,5 +114,6 @@ gulp.task('default', ['serve', 'sass']);
 
 gulp.task('serve-prod', ['minify-css', 'production_build'], serve({
   root: './',
+  middleware: [ historyApiFallback() ],
   port: process.env.PORT || 5000,
 }));
