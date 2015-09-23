@@ -118,12 +118,12 @@ gulp.task('default', ['serve', 'sass']);
 
 gulp.task('serve-prod', ['minify-css', 'production_build'], function() {
   // serve static assets normally
-  app.use(express.static(__dirname + '/public'));
+  app.use(express.static(__dirname + '/'));
 
   // handle every other route with index.html, which will contain
   // a script tag to your application's JavaScript file(s).
   app.get('*', function(request, response){
-    response.sendFile(path.resolve(__dirname, 'public', 'index.html'))
+    response.sendFile(path.resolve(__dirname, '', 'index.html'))
   });
   app.listen(process.env.PORT || 5000);
 });
