@@ -4,7 +4,6 @@ var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var browserify = require('browserify');
 var watchify = require('watchify');
-var reactify = require('reactify');
 var notifier = require('node-notifier');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
@@ -13,6 +12,7 @@ var sync = require('browser-sync');
 var historyApiFallback = require('connect-history-api-fallback');
 var serve = require('gulp-serve');
 var minifyCss = require('gulp-minify-css');
+var babelify = require('babelify');
 
 var notify = function(error) {
   var message = 'In: ';
@@ -38,7 +38,7 @@ var notify = function(error) {
 
 var bundler = watchify(browserify({
   entries: ['./src/app.jsx'],
-  transform: [reactify],
+  transform: [babelify],
   extensions: ['.jsx'],
   debug: true,
   cache: {},

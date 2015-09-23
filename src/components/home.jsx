@@ -79,12 +79,12 @@ module.exports = React.createClass({
 
         <div className="section-content container">
           <p>
-            You can read more about what makes TAMARS so unique by <Link to="/contact"> clicking this link</Link> or if you're heard enough and want to book now then click the button below!
+            You can read more about what makes TAMARS so unique by <Link to="/treatment"> clicking this link</Link> or if you're heard enough and want to book now then click the button below!
           </p>
         </div>
 
         <div className="text-center">
-          <Link to="/treatment">
+          <Link to="/contact">
             <button className="highlight">I want to book an appointment now</button>
           </Link>
         </div>
