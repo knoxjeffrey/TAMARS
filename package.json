@@ -12,6 +12,7 @@
     "browser-sync": "^2.9.3",
     "browserify": "^9.0.3",
     "connect-history-api-fallback": "^1.1.0",
+    "express": "^4.13.3",
     "gulp": "^3.8.11",
     "gulp-concat": "^2.5.2",
     "gulp-minify-css": "^1.2.1",
@@ -32,6 +33,5 @@
     "watchify": "^2.4.0",
     "whatwg-fetch": "^0.9.0"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }

@@ -9,10 +9,11 @@ var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var sync = require('browser-sync');
-historyApiFallback = require('connect-history-api-fallback');
+var historyApiFallback = require('connect-history-api-fallback');
 var serve = require('gulp-serve');
 var minifyCss = require('gulp-minify-css');
 var babelify = require('babelify');
+var express = require('express');
 
 var notify = function(error) {
   var message = 'In: ';
@@ -112,7 +113,8 @@ gulp.task('minify-css', function() {
 
 gulp.task('default', ['serve', 'sass']);
 
-gulp.task('serve-prod', ['minify-css', 'production_build'], serve({
-  root: './',
-  port: process.env.PORT || 5000,
-})).use(historyApiFallback());
+gulp.task('serve-prod', ['minify-css', 'production_build'], function() {
+  var app = express();
+  app.get("/")
+  app.listen(process.env.PORT || 5000);
+});
