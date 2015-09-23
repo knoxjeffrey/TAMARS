@@ -13,7 +13,10 @@ var historyApiFallback = require('connect-history-api-fallback');
 var serve = require('gulp-serve');
 var minifyCss = require('gulp-minify-css');
 var babelify = require('babelify');
+
 var express = require('express');
+var path = require('path')
+var app = express();
 
 var notify = function(error) {
   var message = 'In: ';
@@ -114,7 +117,13 @@ gulp.task('minify-css', function() {
 gulp.task('default', ['serve', 'sass']);
 
 gulp.task('serve-prod', ['minify-css', 'production_build'], function() {
-  var app = express();
-  app.get("/")
+  // serve static assets normally
+  app.use(express.static(__dirname + '/public'));
+
+  // handle every other route with index.html, which will contain
+  // a script tag to your application's JavaScript file(s).
+  app.get('*', function(request, response){
+    response.sendFile(path.resolve(__dirname, 'public', 'index.html'))
+  });
   app.listen(process.env.PORT || 5000);
 });
