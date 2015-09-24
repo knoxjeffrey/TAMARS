@@ -20,8 +20,8 @@ module.exports = React.createClass({
     };
 
     return (
-      <div className={ 'fluidvids' } style={ ratio }>
-        <iframe src={ this.props.src } width={ this.props.width } height={ this.props.height } frameBorder={ 0 } webkitAllowFullScreen mozAllowFullScreen allowFullScreen></iframe>
+      <div className={ 'google-map' } style={ ratio }>
+        <iframe src={ this.props.src } width={ this.props.width } height={ this.props.height } frameBorder={ 0 } allowFullScreen></iframe>
       </div>
     );
   }

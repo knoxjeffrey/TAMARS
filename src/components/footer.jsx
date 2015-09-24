@@ -15,7 +15,7 @@ module.exports = React.createClass({
 					<a href="/contact">Contact</a>
 				</p>
 
-				<h3>21st Century Back Care &copy; 2015</h3>
+				<h4>21st Century Back Care &copy; 2015</h4>
 			</div>
 
 			<div className="footer-center">
@@ -24,7 +24,7 @@ module.exports = React.createClass({
 
 			<div className="footer-right text-center">
 
-				<h3>Recommend</h3>
+				<h4>Recommend</h4>
         <br/>
 				<div><Social /></div>
 
