@@ -1,10 +1,21 @@
 @import "../colors";
 
-.footer {
-  background-color: $primary-color-minus-1;
-  color: #fff;
-  margin-top: 40px;
-  padding: 20px;
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 120px;
+
+  @media only screen and (max-width: 880px) {
+    height: 230px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    height: 120px;
+  }
+
+  @media only screen and (max-width:480px) {
+    height: 120px;
+  }
 }
 
 .footer-distributed{
@@ -70,7 +81,7 @@
 /* Footer Center */
 
 .footer-distributed .footer-center{
-	width: 35%;
+	width: 30%;
 }
 
 .footer-distributed .footer-center .footer-icons{
@@ -98,7 +109,7 @@
 /* Footer Right */
 
 .footer-distributed .footer-right{
-	width: 20%;
+	width: 30%;
 }
 
 /* If you don't want the footer to be responsive, remove these media queries */

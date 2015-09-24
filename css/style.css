@@ -6481,6 +6481,10 @@ button.close {
     padding-bottom: 15px; }
     .contact-details .contact-details-info {
       margin-top: 30px; }
+    .contact-details .contact-details-opening-hours {
+      margin-top: 60px; }
+      .contact-details .contact-details-opening-hours .opening-times {
+        margin-top: 10px; }
     .contact-details .contact-details-image {
       margin-right: 10px;
       float: left; } }
@@ -6502,6 +6506,10 @@ button.close {
     padding-top: 15px; }
     .contact-details .contact-details-info {
       margin-top: 30px; }
+    .contact-details .contact-details-opening-hours {
+      margin-top: 60px; }
+      .contact-details .contact-details-opening-hours .opening-times {
+        margin-top: 10px; }
     .contact-details .contact-details-image {
       margin-right: 10px;
       float: left; } }
@@ -6588,10 +6596,22 @@ button.close {
   font-weight: 300;
   font-style: normal; }
 
-html, body {
-  height: 100%;
-  margin: 0px;
-  padding: 0px; }
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 150px; }
+  @media only screen and (max-width: 880px) {
+    body {
+      margin-bottom: 300px; } }
+  @media only screen and (max-width: 768px) {
+    body {
+      margin-bottom: 150px; } }
+  @media only screen and (max-width: 480px) {
+    body {
+      margin-bottom: 150px; } }
 
 body {
   font-family: OpenSans; }
@@ -6698,11 +6718,19 @@ blockquote p {
 .section-content {
   margin-top: 30px; }
 
-.footer {
-  background-color: #0087B1;
-  color: #fff;
-  margin-top: 40px;
-  padding: 20px; }
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 120px; }
+  @media only screen and (max-width: 880px) {
+    footer {
+      height: 230px; } }
+  @media only screen and (max-width: 768px) {
+    footer {
+      height: 120px; } }
+  @media only screen and (max-width: 480px) {
+    footer {
+      height: 120px; } }
 
 .footer-distributed {
   background-color: #0087B1;
@@ -6754,7 +6782,7 @@ blockquote p {
 
 /* Footer Center */
 .footer-distributed .footer-center {
-  width: 35%; }
+  width: 30%; }
 
 .footer-distributed .footer-center .footer-icons {
   margin-right: 15px; }
@@ -6775,7 +6803,7 @@ blockquote p {
 
 /* Footer Right */
 .footer-distributed .footer-right {
-  width: 20%; }
+  width: 30%; }
 
 /* If you don't want the footer to be responsive, remove these media queries */
 @media (max-width: 880px) {

@@ -31,6 +31,13 @@ module.exports = React.createClass({
                 <img className="contact-details-image" src="../../images/Mail.svg" alt="Map" />
                 <span>info@tamars.co.uk</span>
               </div>
+              <div className="contact-details-opening-hours">
+                <img className="contact-details-image" src="../../images/Alarm.svg" alt="Map" />
+                <span>Opening hours:</span>
+                <div className="opening-times">
+            Mon - Fri: 9am - 6pm
+                </div>
+              </div>
             </h4>
           </div>
 
