@@ -1,4 +1,7 @@
 var React = require('react');
+var Router = require('react-router');
+var Link = Router.Link
+
 var Social = require('./social');
 
 module.exports = React.createClass({
@@ -8,11 +11,11 @@ module.exports = React.createClass({
 			<div className="footer-left">
 
 				<p className="footer-links">
-					<a href="/">Home</a>
+					<Link to="/">Home</Link>
 					·
-					<a href="/tamars">TAMARS</a>
+					<Link to="/treatment">TAMARS</Link>
 					·
-					<a href="/contact">Contact</a>
+					<Link to="/contact">Contact</Link>
 				</p>
 
 				<h4>21st Century Back Care &copy; 2015</h4>
