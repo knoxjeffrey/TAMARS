@@ -6720,7 +6720,6 @@ blockquote p {
 
 footer {
   position: absolute;
-  bottom: 0;
   height: 120px; }
   @media only screen and (max-width: 880px) {
     footer {
@@ -6803,7 +6802,8 @@ footer {
 
 /* Footer Right */
 .footer-distributed .footer-right {
-  width: 30%; }
+  width: 30%;
+  padding-bottom: 25px; }
 
 /* If you don't want the footer to be responsive, remove these media queries */
 @media (max-width: 880px) {
