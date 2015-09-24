@@ -6720,6 +6720,7 @@ blockquote p {
 
 footer {
   position: absolute;
+  bottom: 0;
   height: 120px; }
   @media only screen and (max-width: 880px) {
     footer {
