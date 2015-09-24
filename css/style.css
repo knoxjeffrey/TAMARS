@@ -6531,6 +6531,16 @@ button.close {
     margin-top: 90px; } }
 
 @charset "UTF-8";
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../../fonts/OpenSans-Light.eot");
+  src: url("../../fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/OpenSans-Light.woff") format("woff"), url("../../fonts/OpenSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+body {
+  font-family: OpenSans; }
+
 a:link {
   text-decoration: none;
   color: inherit; }
@@ -6631,7 +6641,7 @@ blockquote p {
   background-color: #0087B1;
   color: #fff;
   margin-top: 40px;
-  padding: 30px; }
+  padding: 20px; }
 
 .footer-distributed {
   background-color: #0087B1;
@@ -6640,8 +6650,8 @@ blockquote p {
   box-sizing: border-box;
   width: 100%;
   text-align: left;
-  font: bold 16px;
-  padding: 30px 50px;
+  font: bold;
+  padding: 20px 50px;
   margin-top: 40px; }
 
 .footer-distributed .footer-left,
@@ -6657,7 +6667,6 @@ blockquote p {
 /* The company logo */
 .footer-distributed h3 {
   color: #ffffff;
-  font: 36px;
   margin: 0; }
 
 .footer-distributed h3 span {
@@ -6666,18 +6675,19 @@ blockquote p {
 /* Footer links */
 .footer-distributed .footer-links {
   color: #ffffff;
-  margin: 20px 0 12px;
+  margin: 0 0 12px;
   padding: 0; }
 
 .footer-distributed .footer-links a {
   display: inline-block;
   line-height: 1.8;
   text-decoration: none;
-  color: inherit; }
+  color: inherit;
+  padding-left: 5px;
+  padding-right: 5px; }
 
 .footer-distributed .footer-company-name {
   color: #8f9296;
-  font-size: 14px;
   font-weight: normal;
   margin: 0; }
 
@@ -6696,7 +6706,6 @@ blockquote p {
   line-height: 2.2; }
 
 .footer-distributed .footer-center p span {
-  font: 12px;
   display: block;
   line-height: 1.5; }
 
@@ -6709,8 +6718,6 @@ blockquote p {
 
 /* If you don't want the footer to be responsive, remove these media queries */
 @media (max-width: 880px) {
-  .footer-distributed {
-    font: bold 14px sans-serif; }
   .footer-distributed .footer-left,
   .footer-distributed .footer-center,
   .footer-distributed .footer-right {
@@ -6954,6 +6961,12 @@ blockquote p {
     font-size: 45px; }
   .primary-nav ._nav-list ._nav-item:hover {
     font-size: 50px; } }
+
+@media only screen and (max-width: 480px) {
+  .primary-nav ._nav-list ._nav-item {
+    font-size: 35px; }
+  .primary-nav ._nav-list ._nav-item:hover {
+    font-size: 40px; } }
 
 .primary-nav .tutorials-nav {
   display: none; }

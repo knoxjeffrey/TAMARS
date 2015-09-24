@@ -20,21 +20,6 @@ module.exports = React.createClass({
 
 			<div className="footer-center">
 
-				<div>
-					<img className="footer-icons" src="../../images/Map2.svg" alt="Map" />
-					<p><span>63 Main Street</span> Moira, Northern Ireland, BT67 0LQ</p>
-				</div>
-
-				<div>
-					<img className="footer-icons" src="../../images/Telephone.svg" alt="Map" />
-					<p>028 9261 0616</p>
-				</div>
-
-				<div>
-					<img className="footer-icons" src="../../images/Mail.svg" alt="Map" />
-					<p><a href="mailto:info@tamars.co.uk">info@tamars.co.uk</a></p>
-				</div>
-
 			</div>
 
 			<div className="footer-right text-center">
@@ -46,9 +31,6 @@ module.exports = React.createClass({
 			</div>
 
 		</footer>
-
-
-
 
   }
 });

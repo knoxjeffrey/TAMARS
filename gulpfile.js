@@ -18,6 +18,16 @@ var express = require('express');
 var path = require('path')
 var app = express();
 
+/*
+require('node-jsx').install()
+var React = require('react');
+var ReactRouter = require('react-router');
+var createLocation = require('react-router/node_modules/history/lib/createLocation');
+var RoutingContext = ReactRouter.RoutingContext;
+var match = ReactRouter.match;
+var routes = require('./src/routes');
+var renderToString = require('react-dom/server');
+*/
 var notify = function(error) {
   var message = 'In: ';
   var title = 'Error: ';
@@ -125,5 +135,6 @@ gulp.task('serve-prod', ['minify-css', 'production_build'], function() {
   app.get('*', function(request, response){
     response.sendFile(path.resolve(__dirname, '', 'index.html'))
   });
+
   app.listen(process.env.PORT || 5000);
 });
