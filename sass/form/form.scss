@@ -1,3 +1,5 @@
+@import "../colors";
+
 form {
   margin-top: 30px;
 }
@@ -164,13 +166,13 @@ form {
   z-index: 10;
 }
 .input_group i.input_error_icon path {
-  fill: #f16767;
+  fill: $primary-color-minus-2;
 }
 .input_group i.input_valid_icon {
   z-index: 1;
 }
 .input_group i.input_valid_icon path {
-  fill: #50b87f;
+  fill: $primary-color-plus-1;
 }
 .input_group.input_error i.input_error_icon svg {
   opacity: 1;
@@ -193,7 +195,7 @@ form {
   line-height: 70px;
   width: auto;
   height: 70px;
-  background: #f16767;
+  background: $primary-color-minus-2;
   -webkit-box-sizing: border-box;
   -khtml-box-sizing: border-box;
   -moz-box-sizing: border-box;

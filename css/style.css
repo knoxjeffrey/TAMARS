@@ -6883,13 +6883,13 @@ form {
   z-index: 10; }
 
 .input_group i.input_error_icon path {
-  fill: #f16767; }
+  fill: #F31857; }
 
 .input_group i.input_valid_icon {
   z-index: 1; }
 
 .input_group i.input_valid_icon path {
-  fill: #50b87f; }
+  fill: #0BDAD4; }
 
 .input_group.input_error i.input_error_icon svg {
   opacity: 1; }
@@ -6912,7 +6912,7 @@ form {
   line-height: 70px;
   width: auto;
   height: 70px;
-  background: #f16767;
+  background: #F31857;
   -webkit-box-sizing: border-box;
   -khtml-box-sizing: border-box;
   -moz-box-sizing: border-box;
