@@ -6515,7 +6515,7 @@ button.close {
       float: left; } }
 
 .send-message {
-  background: #f9f9f9;
+  background: #f2f2f2;
   margin-top: 40px;
   padding-bottom: 30px; }
 
@@ -6666,7 +6666,7 @@ button {
   background-color: #0BDAD4;
   text-decoration: none;
   font-size: 1.4em;
-  border: 2px #ffffff solid;
+  border: 2px #0BDAD4 solid;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
@@ -6682,7 +6682,8 @@ button:focus {
   outline: 0; }
 
 button:hover {
-  cursor: pointer; }
+  cursor: pointer;
+  border: 2px #0CF9AF solid; }
 
 .highlight:hover {
   background-color: #0CF9AF; }
@@ -6714,13 +6715,15 @@ blockquote p {
   background-color: #00B8F1;
   text-decoration: none;
   font-size: 1.6em;
-  border: 2px #ffffff solid;
   margin: 0 auto; }
   @media (max-width: 480px) {
     .section-header {
       width: 100%; } }
 
 .section-content {
+  margin-top: 30px; }
+
+form {
   margin-top: 30px; }
 
 .input_group {

@@ -84,7 +84,7 @@ module.exports = React.createClass({
 
             <button
               type="submit"
-              className="button button_wide">
+              className="highlight">
               Send Message
             </button>
 
