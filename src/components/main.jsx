@@ -1,7 +1,7 @@
 var React = require('react');
 var ReactRouter = require('react-router');
-var Header = require('./header');
-var Footer = require('./footer');
+var Header = require('./navigation/header');
+var Footer = require('./navigation/footer');
 
 module.exports = React.createClass({
   render: function() {

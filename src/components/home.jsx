@@ -1,7 +1,7 @@
 var React = require('react');
 var Router = require('react-router');
 var Link = Router.Link
-var FluidVid = require('./fluidvid')
+var FluidVid = require('../utilities/fluidvid')
 
 module.exports = React.createClass({
   render: function() {

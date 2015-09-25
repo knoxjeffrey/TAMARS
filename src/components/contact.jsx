@@ -1,5 +1,6 @@
 var React = require('react');
-var GoogleMap = require('./google-map')
+var GoogleMap = require('../utilities/google-map')
+var Form = require('../utilities/form/form')
 
 module.exports = React.createClass({
   render: function() {
@@ -43,6 +44,16 @@ module.exports = React.createClass({
 
         </div>
       </div>
+
+      <div className="send-message">
+        <div className="section-header text-center">
+          Send Us A Message
+        </div>
+        <div className="section-content container">
+          <Form />
+        </div>
+      </div>
+
 
     </div>
   }
